@@ -2,4 +2,4 @@
 title: "Welcome to my website!"
 ---
 
-You're up and running!
+You'll soon find my CV and some blog posts. Stay tuned!

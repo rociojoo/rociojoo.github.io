@@ -2,6 +2,6 @@
 title: "About me"
 ---
 
-## Header
+## Summary
 
-Say more about you here.
+Rocío is a postdoctoral research associate at University of Florida since 2018, as a movement statistician.
