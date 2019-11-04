@@ -1,9 +1,11 @@
 ---
-title: "Welcome to my website!"
+title: "Hey, welcome to my website!"
 output:
   html_document:
     includes:
       in_header: cover.html
 ---
+
+I'm Rocío Joo, movement statistician, geek and addicted to music and traveling. 
 
 You'll soon find my CV and some blog posts. Stay tuned!

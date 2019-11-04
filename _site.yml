@@ -23,6 +23,9 @@ navbar:
     - text: "GitHub"
       icon: fa-github
       href: https://github.com/rociojoo       # CHANGE HERE 
+    - text: "Twitter"
+      icon: fa-twitter
+      href: https://twitter.com/rocio_joo
 output:
   html_document:
     theme: cosmo
