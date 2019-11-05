@@ -1,5 +1,5 @@
 ---
-title: "Resume"
+title: ""
 ---
 
 Please click <a href="CV.pdf#" class="download" title="Download CV as PDF">here</a>	to download a full version of my CV.
