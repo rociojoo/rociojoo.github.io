@@ -56,4 +56,3 @@ packages for movement. 2019. Journal of animal ecology. Accepted. Pre-print in: 
 
   *   Statistics for research and R. Statistics instructor in the ‘Field Techniques and Tropical Ecology Course’ at the Cocha Cashu Biological Station, Manu National Park, Peru. 55 hours. October, 2017.
 
-
