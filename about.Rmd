@@ -2,7 +2,6 @@
 title: "About me"
 ---
 
-## Summary
 
   * I do research in movement ecology, and before I worked with fishing vessel movement. I implement and develop tools to understand the drivers of movement. As a statistician, I am very much interested in models and equations, but I'm also interested in the applications: I want my research to be a contribution to the understanding of life. 
 
