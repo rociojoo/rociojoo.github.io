@@ -1,8 +1,8 @@
 Please click <a href="CV.pdf#" class="download" title="Download CV as PDF">HERE</a>	to download a full version of my CV.
 
+<br />
 
-
-![Research and studies timeline](CVsummary.png)
+![](CVsummary.png)
 
 ## Education
 
