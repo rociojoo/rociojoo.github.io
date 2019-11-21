@@ -5,8 +5,8 @@ title: "About me"
 
   * I do research in movement ecology, and before I worked with fishing vessel movement. I implement and develop tools to understand the drivers of movement. As a statistician, I am very much interested in models and equations, but I'm also interested in the applications: I want my research to be a contribution to the understanding of life. 
 
-  * Currently I'm a postdoctoral research associate at University of Florida since 2018, as a movement statistician. 
+  * Currently I'm a postdoctoral research associate at University of Florida since 2018, as a movement ecologist.
   
   * I'm Peruvian, studied and worked in France and now I'm in South Florida. I also travel a lot. I always take with me: my roots, everything I've learned from different cultures and amazing people, openness to learn more and to be surprised, and, whenever I can, a percussion instrument. 
   
-  ![Science, friendship, music and travels. What else?](websiteI.png)
+  ![Science, friendship, music and travels. What else?](websiteII.png){width=100%}
