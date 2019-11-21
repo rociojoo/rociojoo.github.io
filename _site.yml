@@ -15,7 +15,7 @@ navbar:
       href: cv.html
     - text: "Blog"
       icon: fa-rss
-      href: https://rociojoo.github.io/blog/  # CHANGE HERE OR DELETE ALL 3 LINES 
+      href: blog.html  # CHANGE HERE OR DELETE ALL 3 LINES 
   right:
     - text: "Contact me"
       icon: fa-envelope-o
