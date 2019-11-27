@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">ROCÍO JOO</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    Home
+  </a>
+</li>
+<li>
+  <a href="about.html">
+    <span class="fa fa-user"></span>
+     
+    About
+  </a>
+</li>
+<li>
+  <a href="cv.html">
+    <span class="fa fa-file-pdf-o"></span>
+     
+    CV
+  </a>
+</li>
+<li>
+  <a href="blog.html">
+    <span class="fa fa-rss"></span>
+     
+    Blog
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="mailto:rocio.joo@ufl.edu">
+    <span class="fa fa-envelope-o"></span>
+     
+    Contact me
+  </a>
+</li>
+<li>
+  <a href="https://github.com/rociojoo">
+    <span class="fa fa-github"></span>
+     
+    GitHub
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/rocio_joo">
+    <span class="fa fa-twitter"></span>
+     
+    Twitter
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<p><br /></p>
+<div id="is-watching-masterchef-helping-me-become-a-better-researcher" class="section level1">
+<h1>Is watching <strong>masterchef</strong> helping me become a better <strong>researcher</strong>?</h1>
+<p><br /> <br /></p>
+<div class="figure">
+<img src="masterchef.jpeg" style="width:80.0%" />
+
+</div>
+<p><br /></p>
+<p>I know what you are thinking: WTF. I know, but the truth is that when watching masterchef contestants – UK season 10 in case you’re wondering – prepare their dishes, I couldn’t help but find parallels with scientific writing. So I will write what I’ve learned about dishes and maybe you will, too, think about them as papers and their components, or maybe not, maybe you will just think about them as dishes and ingredients because cooking is great and food is amazing. And there’s nothing wrong with thinking about food!</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Start with a plan.</strong> Plan your dish before you start. You must have a vision, an idea of what your dish would look like in the end, what it would taste like, and with that in mind you can plan the different steps to get there.</p></li>
+<li><p><strong>Remember that you have a finite and pre-defined amount of time.</strong> You have a deadline to deliver your dish, so your plan should be consistent with the time given, and be very aware of the time during the whole process. This could be a deadline to serve food to critics, or, in real life, to serve dinner to your guests –which is your own deadline since you’re the one who fixed the time for dinner. Before the time is over, there has to be food on the plate.</p></li>
+<li><p><strong>Choose a star of the dish.</strong> One element should be the star. And all of the others should work together to enhance it. They cannot compete with each other for stardom.</p></li>
+<li><p><strong>Every element on the plate should have its own personality.</strong> Yes, there is a star. The star should shine not only with its own light, but with the light of all the other elements on the plate. This requires each element to be cooked in the best way possible to bring out all of its flavor and looks.</p></li>
+<li><p><strong>Everything has to come together.</strong> Everything on the plate should make sense, so choose wisely. A dish should tell one story, have one message. All elements should work as a team and complement each other. And everything should be placed on the plate in a coherent way. If you have elements that are perfectly cooked but should not be there, don’t be afraid to take them out if they are not working. They may be good for another dish, not this one.</p></li>
+<li><p><strong>Make a good sauce that connects everything in the plate.</strong> In many cases – maybe most cases, the dish is incomplete without a good sauce. The sauce is sometimes mistankenly neglected, though it is the glue that sticks everything together. It must have a perfect flavor, setting the tone of the dish. And perfect amount. Too little and the elements will not be linked enough. Too much and it will mask the elements you perfectly cooked.</p></li>
+<li><p><strong>Execute everything as best as you can.</strong> Pay attention to the details from the moment you start cooking until you finish plating. You’ve chosen a few elements that should be on the dish, so when you cook them pay real attention. Don’t serve them undercooked, and don’t serve them overcooked. Serve them perfectly cooked for the dish you’re making. It is possible to screw things up under high pressure, but try to avoid having <del>reviewers</del>judges sending it back to the kitchen because they can’t eat it.</p></li>
+<li><p><strong>Plating matters.</strong> Presentation is nothing without great cooking, nonetheless it should not be disregarded. The presentation provides the first impression of your dish. The look of the plate attracts people, it starts exciting them, almost preparing them for your food. It is the first stage of the experience. Think about the order in which each element is plated, and in which areas you need to pour more sauce.</p></li>
+<li><p><strong>Give an element of surprise.</strong> The same ingredients can be available to everybody. And chefs have had training and experience, so they are not starting from zero or inventing the wheel; their ideas may share similarities. There are going to be cooking techniques or parts of the dishes that are known, common, expected. But be creative. Each product can be cooked in many different ways. Make your dish a unique experience. Make it bring a big unexpected hit of flavor. And worth going through the experience.</p></li>
+<li><p><strong>Be true to yourself.</strong> Let your dish express who you are.</p></li>
+<li><p><strong>Work hard and take risks as you go.</strong> There is a lot of pressure. Try to cope with it without losing the joy in what you’re doing. Let that joy push you and increase your level. Challenge yourself. Learn. Evolve. And, of course, there is a possibility that it won’t work out. The execution could be flawed. Or the idea. It may be the end of your dish but not the end of the world.</p></li>
+<li><strong>Be open to critics.</strong> Try to use the critics to improve your cooking. And be ready for divided opinions. Not everybody has to like everything in your dish, or like your idea. It’s part of taking risks.</li>
+<li><p><strong>Deal with failure.</strong> If in the end a dish doesn’t turn out like you wanted, or gets bad critics, take a moment to try to fix it. If you can’t, get up and cook again. Failure is part of life.</p></li>
+<li><p><strong>Remember that your food can be inspiring.</strong> It can make someone’s day to have a very good meal. And a truly amazing dish does not only make people happy; it’s inspirational.</p></li>
+</ol>
+<p>If you managed to find all the parallels with scientific writing, you may think that all of this is really obvious. It may be for many people. I just needed to watch masterchef to see it. And I’ll try to apply this to my research. It doesn’t mean that it will work out, but I’ll do my best. With respect to cooking, this is way out of my league and I’m in no way trying to cook profesionally. It’s still good to have these things in mind, though.</p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
