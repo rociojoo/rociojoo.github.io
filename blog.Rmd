@@ -2,4 +2,4 @@
 
 I'll be publishing some random posts here from the time to time. 
 
-<a href=post-cooking.html>Here</a>	is my first post. It's either about food or about writing scientific papers. 
+<a href=post-cooking.html>Here</a>	is my first post: *Is watching masterchef helping me become a better researcher?* It's either about food or about writing scientific papers. 
