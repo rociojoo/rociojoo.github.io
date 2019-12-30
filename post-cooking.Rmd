@@ -5,7 +5,7 @@
 <br />
 <br />
 
-![](blogposts/masterchef.jpeg){width=80%}
+![](blogposts/post-cooking/masterchef.jpeg){width=80%}
 
 
 <br />
