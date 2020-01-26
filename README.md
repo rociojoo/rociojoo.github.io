@@ -1,4 +1,8 @@
 
+This is my personal website. 
+
+A few reminders since I always forget:
+
 - Build the website by running `rmarkdown::render_site(encoding = "UTF-8")` or just `Ctrl/Cmd + Shift + B`.
 
 - Commit and push everything from RStudio.
