@@ -2,4 +2,10 @@
 
 I'll be publishing some random posts here from the time to time. 
 
-Here	is my first post: <a href=post-cooking.html>*Is watching a cooking show helping me become a better researcher?*</a> It's either about food or about writing scientific papers. Your choice.
+Here	is my first post: <a href=post-cooking.html>*Is watching a cooking show helping me become a better researcher?*</a> It's either about food or about writing scientific papers. Your choice. 
+
+<br />
+
+<center>
+![](blogposts/post-cooking/arroz-con-pollo.jpeg){width=30%}
+</center>

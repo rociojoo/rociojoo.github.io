@@ -1,12 +1,15 @@
+
+<br />
+
 ## Please click <a href="cv/CV.pdf#" class="download" title="Download CV as PDF">HERE</a>	to download a full version of my CV.
 
 <br />
 
-![](cv/CVsummary.png)
+![](cv/CVsummary2.png)
 
 ## Education
 
-  *   2010 -- 2013 PhD in Ecosystems (Numerical Ecology), University of Montpellier 2 (UM2),
+  *   2010 -- 2013 PhD in Ecosystems (Quantitative Ecology), University of Montpellier 2 (UM2),
 France.
 
   *   2009 -- 2010 Master in Mathematics, Statistics and Applications, Montpellier SupAgro -
