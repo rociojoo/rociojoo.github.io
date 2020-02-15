@@ -1,12 +1,15 @@
+
+<br />
+
 ## Please click <a href="cv/CV.pdf#" class="download" title="Download CV as PDF">HERE</a>	to download a full version of my CV.
 
 <br />
 
-![](cv/CVsummary.png)
+![](cv/CVsummary2.png)
 
 ## Education
 
-  *   2010 -- 2013 PhD in Ecosystems (Numerical Ecology), University of Montpellier 2 (UM2),
+  *   2010 -- 2013 PhD in Ecosystems (Quantitative Ecology), University of Montpellier 2 (UM2),
 France.
 
   *   2009 -- 2010 Master in Mathematics, Statistics and Applications, Montpellier SupAgro -
@@ -19,11 +22,11 @@ Peru.
 ## Selected publications
 
   *   Joo, Boone, Clay, Patrick, Clusella-Trullas, Basille. Navigating through the R
-packages for movement. 2019. Journal of animal ecology. Accepted. Pre-print in: https://arxiv.org/abs/1901.05935
+packages for movement. 2020. Journal of animal ecology 89 (247-267). https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2656.13116
 
-  *   Joo, Etienne, Bez, Mahevas. Metrics for describing dyadic movement: a review. 2018. Movement ecology 6 (26). https://bit.ly/2pGNOv0
+  *   Joo, Etienne, Bez, Mahevas. Metrics for describing dyadic movement: a review. 2018. Movement ecology 6 (26). https://movementecologyjournal.biomedcentral.com/articles/10.1186/s40462-018-0144-2
 
-  *   Joo, Bertrand, Tam and Fablet. Hidden Markov models: the best models for forager movements? 2013. PLOS ONE 8 (e71246). https://bit.ly/32dJ8d5
+  *   Joo, Bertrand, Tam and Fablet. Hidden Markov models: the best models for forager movements? 2013. PLOS ONE 8 (e71246). https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0071246
 
 ## Presentations in the last year
 
