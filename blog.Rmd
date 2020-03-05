@@ -28,4 +28,12 @@ I'll be publishing some random posts from the time to time.
 
 </center>
 
+* <a href=MovementVisualization.html>*Movement visualization workshop with R*</a>. I show how to do animations of tracking data in R with gganimate, anipaths and moveVis.
+
+  <center>
+![](blogposts/post-visualization/soccer_gganimate.gif){width=40%}
+
+</center>
+
+
   <!-- * <a href=post-moveco1-intro.html>*A decade of movement ecology.*</a> Codes, data and supplementary materials for the manuscript of the same name. -->
