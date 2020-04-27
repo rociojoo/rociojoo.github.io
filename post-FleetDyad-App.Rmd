@@ -2,6 +2,16 @@
 
 ## Pelagic pair trawlers 
 
+ <center>
+![](blogposts/post-FleetDyad/PTM/clustFree_MetricsHist_PTM_all_ordered.png){width=60%}
+
+Histogram for each cluster per metric.
+</center>
+
+<br />
+
+
+
 ### Cluster 1: most representative example
 
   <center>
@@ -37,6 +47,15 @@
 
 
 ## Large bottom otter trawlers
+
+ <center>
+![](blogposts/post-FleetDyad/LOTB/clustFree_MetricsHist_PTM_LOTB_ordered.png){width=60%}
+
+Histogram for each cluster per metric.
+</center>
+
+<br />
+
 
 ### Cluster 1: most representative example
 
@@ -74,6 +93,16 @@
 
 ## Small bottom otter trawlers
 
+
+ <center>
+![](blogposts/post-FleetDyad/SOTB/clustFree_MetricsHist_PTM_SOTB_ordered.png){width=60%}
+
+Histogram for each cluster per metric.
+</center>
+
+<br />
+
+
 ### Cluster 1: most representative example
 
   <center>
@@ -110,6 +139,16 @@
 
 ## Mid-water otter trawlers
 
+
+ <center>
+![](blogposts/post-FleetDyad/OTM/clustFree_MetricsHist_PTM_OTM_ordered.png){width=60%}
+
+Histogram for each cluster per metric.
+</center>
+
+<br />
+
+
 ### Cluster 1: most representative example
 
   <center>
@@ -144,6 +183,14 @@
 
 
 ## Anchovy purse-seiners
+
+ <center>
+![](blogposts/post-FleetDyad/APS/clustFree_MetricsHist_PTM_APS-10_ordered.png){width=60%}
+
+Histogram for each cluster per metric. 
+</center>
+
+<br />
 
 ### Cluster 1: most representative example
 
@@ -180,6 +227,17 @@
 
 
 ## Tuna purse-seiners
+
+
+ <center>
+![](blogposts/post-FleetDyad/TPS/clustFree_MetricsHist_PTM_thon_ordered.png){width=60%}
+
+Histogram for each cluster per metric. Purple and yellow are groups 2 and 3, respectively.
+</center>
+
+<br />
+
+
 
 ### Cluster 2: most representative example
 
