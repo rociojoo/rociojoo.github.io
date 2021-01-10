@@ -11,7 +11,7 @@
 
 
 
-<title>Hey, welcome to my website!</title>
+<title>index.utf8</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,9 +22,19 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
-<div><img src="cover.JPG" width="100%" align="center"></div>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -282,10 +292,10 @@ $(document).ready(function () {
   </a>
 </li>
 <li>
-  <a href="about.html">
+  <a href="research.html">
     <span class="fa fa-user"></span>
      
-    About
+    Research
   </a>
 </li>
 <li>
@@ -334,13 +344,22 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Hey, welcome to my website!</h1>
 
 </div>
 
 
-<p>I’m Rocío Joo, movement statistician and statistician on the move. Addicted to music and traveling.</p>
-<p>Here you can find some information about me, an updated CV and some blog posts (OK I only have one for now). Stay tuned for more!</p>
+<p><br></p>
+<center>
+<img src="images/me.png" style="width:60.0%" />
+</center>
+<p><br> <br></p>
+<p><span style="font-size:2em;">Hey, welcome to my website!</span></p>
+<ul>
+<li><p>To know more about my research, click <a href="research.html">here</a>.</p></li>
+<li><p>For more personal stuff (music, travels, food, books) click here.</p></li>
+<li><p>For blog posts that could give a mix of both, they’re here.</p></li>
+</ul>
+<p><br></p>
 
 
 
@@ -351,7 +370,7 @@ $(document).ready(function () {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();

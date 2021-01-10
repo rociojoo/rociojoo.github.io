@@ -7,9 +7,9 @@ navbar:
     - text: "Home"
       icon: fa-home
       href: index.html
-    - text: "About"
+    - text: "Research"
       icon: fa-user 
-      href: about.html
+      href: research.html
     - text: "CV"
       icon: fa-file-pdf-o
       href: cv.html
