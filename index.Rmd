@@ -1,13 +1,13 @@
 <br>
 
 <center>
-![](images/me.png){width=60%}
+![](images/rocio.jpg){width=60%}
 </center>
 
 <br>
 <br>
 
-<span style="font-size:2em;">Hey, welcome to my website!</span>
+<span style="font-size:2em;">Hey, welcome to my website! Thanks for coming :) </span>
 
 * To know more about my research, click [here](research.html).
 
