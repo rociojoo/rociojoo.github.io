@@ -12,7 +12,7 @@ navbar:
       href: research.html
     - text: "CV"
       icon: fa-file-pdf
-      href: cv.html
+      href: cv/CV.pdf
     - text: "Blog"
       icon: fa-rss
       href: blog.html  # CHANGE HERE OR DELETE ALL 3 LINES 
