@@ -1,7 +1,7 @@
 <br>
 
 <center>
-![](images/rocio.jpg){width=60%}
+![](images/rocio.jpg){width=40%}
 </center>
 
 <br>
@@ -11,9 +11,9 @@
 
 * To know more about my research, click [here](research.html).
 
-* For more personal stuff (music, travels, food, books) click here.
+* For more personal stuff (music, travels, food, books), I'm working on it. I promise.
 
-* For blog posts that could give a mix of both, they're here.
+* For blog posts that could give a mix of both, they're [here](blog.html).
 
 <br>
 

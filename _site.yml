@@ -21,10 +21,10 @@ navbar:
       icon: fa-envelope
       href: mailto:rocio.joo@globafishingwatch.org                  # CHANGE HERE 
     - text: "GitHub"
-      icon: fa-github
+      icon: fab fa-github
       href: https://github.com/rociojoo       # CHANGE HERE 
     - text: "Twitter"
-      icon: <i class="fab fa-twitter"></i>
+      icon: fab fa-twitter
       href: https://twitter.com/rocio_joo
 output:
   html_document:
