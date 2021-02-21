@@ -105,3 +105,16 @@ The machine learning techniques I used were calibrated and validated in a superv
   <!-- * I'm Peruvian, studied and worked in France and now I'm in South Florida. I also travel a lot. I always take with me: my roots, everything I've learned from different cultures and amazing people, openness to learn more and to be surprised, and, whenever I can, a percussion instrument.  -->
 
   <!-- ![Science, friendship, music and travels. What else?](about/websiteII.png) -->
+  
+  
+  
+<!-- Most recent teaching activities -->
+
+<!--     Data Carpentry - Ecology Workshop (data organization, cleaning, management, visualization and analysis with R and SQL). Instructor and helper at the Tropical Research and Education Center, University of Florida, Homestead, USA. 14 hours. April, 2019. -->
+
+<!--     Hidden Markov models with MomentuHMM. Workshop instructor at the University of Liverpool, Liverpool, UK. 4 hours. May, 2018. -->
+
+<!--     Data Carpentry - Ecology Workshop (data organization, cleaning, management, visualization and analysis with R and SQL). Instructor and helper at the Fort Lauderdale Res and Educationearch Center, University of Florida, Davie, USA. 14 hours. April, 2018. -->
+
+<!--     Statistics for research and R. Statistics instructor in the ‘Field Techniques and Tropical Ecology Course’ at the Cocha Cashu Biological Station, Manu National Park, Peru. 55 hours. October, 2017. -->
+
