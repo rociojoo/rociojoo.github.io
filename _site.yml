@@ -11,20 +11,20 @@ navbar:
       icon: fa-user 
       href: research.html
     - text: "CV"
-      icon: fa-file-pdf-o
+      icon: fa-file-pdf
       href: cv.html
     - text: "Blog"
       icon: fa-rss
       href: blog.html  # CHANGE HERE OR DELETE ALL 3 LINES 
   right:
     - text: "Contact me"
-      icon: fa-envelope-o
-      href: mailto:rocio.joo@ufl.edu                    # CHANGE HERE 
+      icon: fa-envelope
+      href: mailto:rocio.joo@globafishingwatch.org                  # CHANGE HERE 
     - text: "GitHub"
       icon: fa-github
       href: https://github.com/rociojoo       # CHANGE HERE 
     - text: "Twitter"
-      icon: fa-twitter
+      icon: <i class="fab fa-twitter"></i>
       href: https://twitter.com/rocio_joo
 output:
   html_document:

@@ -7,7 +7,7 @@
 <br>
 <br>
 
-<span style="font-size:2em;">Hey, welcome to my website! Thanks for coming :) </span>
+<span style="font-size:2em;">Hey, welcome to my website! Thanks for coming, gracias por venir :) </span>
 
 * To know more about my research, click [here](research.html).
 
