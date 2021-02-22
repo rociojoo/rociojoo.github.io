@@ -358,8 +358,16 @@ $(document).ready(function () {
 <li><a href="#statistical-methods-to-study-movement">Statistical methods to study movement</a><ul>
 <li><a href="#identifying-behaviors-from-tracking-data">Identifying behaviors from tracking data</a><ul>
 <li><a href="#machine-learning">Machine learning</a></li>
+<li><a href="#markovian-models">Markovian models</a></li>
+<li><a href="#hybrid-models">Hybrid models</a></li>
 </ul></li>
+<li><a href="#multivariate-analysis-and-geostatistics-for-fishing-spatial-effort">Multivariate analysis and geostatistics for fishing spatial effort</a></li>
+<li><a href="#estimating-sampling-effort-to-monitor-the-fishery">Estimating sampling effort to monitor the fishery</a></li>
+<li><a href="#a-generalized-approach-to-the-random-walk-debate-for-human-and-animal-movement">A generalized approach to the random walk debate for human and animal movement</a></li>
+<li><a href="#metrics-for-assessing-dyadic-movement">Metrics for assessing dyadic movement</a></li>
 </ul></li>
+<li><a href="#software-packages-to-process-and-analyze-movement-data">Software packages to process and analyze movement data</a></li>
+<li><a href="#a-text-mining-approach-to-review-the-field-of-movement-ecology">A text mining approach to review the field of movement ecology</a></li>
 </ul></li>
 </ul>
 </div>
@@ -418,18 +426,99 @@ $(document).ready(function () {
 <h2>Statistical methods to study movement</h2>
 <div id="identifying-behaviors-from-tracking-data" class="section level3">
 <h3>Identifying behaviors from tracking data</h3>
-<p>Tracking devices allow us to follow the movement of humans and animals, in many cases around the globe. Because we can often record movement but not the behaviors behind them, we expect that the movement (or the absence of movement) patterns will provide information to identify these behaviors. For fisheries, identifying the behavioral modes or activities performed during fishing trips leads to better quantification of the spatial effort deployed, which can serve as inputs for management decisions and even changing the fishing quota (<span class="citation">Poos, Quirijns, and Rijnsdorp (2010)</span>,<span class="citation">Hornborg et al. (2017)</span>). In ecology, identification of behaviors in animal trajectories facilitates assessing changes in migration or foraging strategies and deployment of effort. If those changes are associated with recognizable anthropogenic or environmental effects, this could lead to changes in conservation strategies.</p>
+<p>Tracking devices allow us to follow the movement of humans and animals, in many cases around the globe. Because we can often record movement but not the behaviors behind them, we expect that the movement (or the absence of movement) patterns will provide information to identify these behaviors. For fisheries, identifying the behavioral modes or activities performed during fishing trips leads to better quantification of the spatial effort deployed, which can serve as inputs for management decisions and even changing the fishing quota <span class="citation">(Poos, Quirijns, and Rijnsdorp 2010; Hornborg et al. 2017)</span>. In ecology, identification of behaviors in animal trajectories facilitates assessing changes in migration or foraging strategies and deployment of effort. If those changes are associated with recognizable anthropogenic or environmental effects, this could lead to changes in conservation strategies.</p>
 <p>Throughout my research, I have used different methods to identify behavioral patterns from tracking data: machine learning techniques (random forests, artificial neural networks, support vector machines) and Markovian models (hidden Markov and hidden semi-Markov models; HMMs and HSMMs, respectively); in some cases, I combined the two to make hybrid models (e.g. random forests embedded into hidden Markov structures; <span class="citation">R. Joo (2013)</span>; <span class="citation">Maufroy et al. (2015)</span>).</p>
 <div id="machine-learning" class="section level4">
 <h4>Machine learning</h4>
-<p>The machine learning techniques I used were calibrated and validated in a supervised framework, in cases where groundtruthed data were available. These were fisheries where observers on-board a sample of fishing vessels registered when fishing sets or other types of activities were performed, like the Peruvian purse-seine anchovy fishery (<span class="citation">Joo (2009)</span>; <span class="citation">Joo et al. (2011)</span>; <span class="citation">R. Joo et al. (2013)</span>), and the Mexican Yucatan fishery (<span class="citation">Torres-Irineo et al. (n.d.)</span>). In the Mexican fishery, this work was a primer for their small-scale fisheries to show the potential of analyzing tracking data to infer fishing sets and quantify the fishing effort. Artisanal fisheries – worldwide – are poorly regulated, hence the relevance of this initiative. In the Peruvian fishery, the Vessel Monitoring System (VMS) data was already being used to infer fishing sets; however, the official method at the time – as in many other fisheries in the world – was a speed threshold. The overestimation of the number of fishing sets was ~182% with the speed threshold (<span class="citation">Bertrand, Diaz, and Lengaigne (2008)</span>), and was reduced to ~1% when using neural networks instead (<span class="citation">Joo et al. (2011)</span>). In order to get the method used in a daily basis by the Instituto del Mar del Perú (IMARPE), I first designed a graphic interface in Matlab, and when the pelagic fisheries department switched to R, I translated all codes to R.</p>
+<p>The machine learning techniques I used were calibrated and validated in a supervised framework, in cases where groundtruthed data were available. These were fisheries where observers on-board a sample of fishing vessels registered when fishing sets or other types of activities were performed, like the Peruvian purse-seine anchovy fishery <span class="citation">(Joo 2009; Joo et al. 2011; R. Joo et al. 2013)</span>, and the Mexican Yucatan fishery (<span class="citation">Torres-Irineo et al. (n.d.)</span>). In the Mexican fishery, this work was a primer for their small-scale fisheries to show the potential of analyzing tracking data to infer fishing sets and quantify the fishing effort. Artisanal fisheries – worldwide – are poorly regulated, hence the relevance of this initiative. In the Peruvian fishery, the Vessel Monitoring System (VMS) data was already being used to infer fishing sets; however, the official method at the time – as in many other fisheries in the world – was a speed threshold. The overestimation of the number of fishing sets was ~182% with the speed threshold (<span class="citation">Bertrand, Diaz, and Lengaigne (2008)</span>), and was reduced to ~1% when using neural networks instead (<span class="citation">Joo et al. (2011)</span>). In order to get the method used in a daily basis by the Instituto del Mar del Perú (IMARPE), I first designed a graphic interface in Matlab, and when the pelagic fisheries department switched to R, I translated all codes to R.</p>
+</div>
+<div id="markovian-models" class="section level4">
+<h4>Markovian models</h4>
+<p>HMMs and HSMMs take into account the sequential nature of the tracking data through transition probabilities – and dwell-time probabilities, in the case of HSMMs. I fitted HMMs and HSMMs in a supervised framework for the Peruvian purse-seine fishery, and found that, when the goal is to infer not only fishing but several types of activities performed in a fishing trip (e.g. searching for fish, cruising), and the time spent in each activity, the Markovian models did a better job than machine learning methods (~80% of global accuracy; <span class="citation">R. Joo et al. (2013)</span>). For this case, I modified the equations and algorithms in HSMMs to work with the irregular time steps that the VMS data contained <span class="citation">(R. Joo 2013)</span>. Because it is actually unusual to have groundtruthed data of behavioral modes (e.g. on-board data in fisheries science, or video data in animal ecology), Markovian models are commonly used in a non-supervised framework, with Expectation-Maximization algorithms for parameter estimation. Using the on-board observer data collected by IMARPE, I evaluated HMMs within supervised and non-supervised frameworks, and showed that, for the Peruvian anchovy fishing trips, the supervised method (i.e. parameter estimation using groundtruthed data) provided better results than the non-supervised one (+10% accuracy for fishing and +25% for searching activities). Results are sensitive to the number of tracks with on-board data (presented at a statistical ecology conference as <span class="citation">Joo et al. (2014)</span>). These findings highlight the importance of on-board observers programs in fisheries to accurately estimate fishing spatial effort, and for animal ecology, that there should be more effort into recording groundtruthed behavioral data.</p>
+<div class="figure" style="text-align: center">
+<img src="images/StateTracks.png" alt="Fig. Inferred behavioral modes. Left panel: fishing vessel track (Joo et al. 2013). Right panel: seabird track (Clay et al. 2020)." width="100%" />
+<p class="caption">
+Fig. Inferred behavioral modes. Left panel: fishing vessel track (Joo et al. 2013). Right panel: seabird track (Clay et al. 2020).
+</p>
+</div>
+<p>In settings where groundtruthed data was non-existent, we worked with non-supervised Markovian models. These were artisanal fisheries in the North-East of Brazil (HSMMs; <span class="citation">Santos Da Silva (2017)</span>, supervision of Bachelor thesis, main advisor M. Thomé de Souza), and seabird foraging trips in Crozet and South Georgia islands (HMMs; <span class="citation">Clay et al. (2020)</span>). For the artisanal fisheries in Brazil, the goal was the same as in the Mexican case, to show the potential of analyzing tracking data to infer fishing activities and quantify the fishing effort. In case of seabirds, and more specifically, wandering albatrosses, we investigated the role of wind in their behavior (e.g. resting, searching, traveling) during foraging trips. We showed that wind plays an important role in their decisions to take off (from resting to traveling), and in the differences in routes that females and males choose. Wind conditions are likely to be altered in climate change scenarios, and could have drastic consequences in the fitness and survival of this soaring species.</p>
+</div>
+<div id="hybrid-models" class="section level4">
+<h4>Hybrid models</h4>
+<p>Hybrid models (HSMM-neural-networks and HSMM-random-forests) were implemented for the Peruvian purse-seine fishery and the floating artificial devices (FADs) in the French tuna fishery, respectively. I implemented a hybrid HSMM-random-forest model on trajectory data from FADs to identify segments of their tracks corresponding to being on vessels, and matched those with the VMS data to identify these vessels. The model provided 97% of accuracy. Part of that work was published in <span class="citation">Maufroy et al. (2015)</span>.</p>
+</div>
+</div>
+<div id="multivariate-analysis-and-geostatistics-for-fishing-spatial-effort" class="section level3">
+<h3>Multivariate analysis and geostatistics for fishing spatial effort</h3>
+<p>A mix of multivariate methods (e.g. principal components, coinertia, hierarchical clustering) allowed me to identify tactics and strategies in the Peruvian industrial anchovy fishery, and their associations to abiotic and biotic conditions (e.g. fish spatial distribution and abundance, sea surface temperature, oxycline depth, El Niño Southern Oscillation) as well as characteristics of the vessels and the fishers themselves <span class="citation">(Joo et al. 2014, 2015)</span>. For those studies, data from multiple sources were used (on-board observers, raw VMS data, behavioral modes obtained with HSMMs, acoustic data from scientific surveys and satellite data). It required interdisciplinary work with oceanographers, biologists and ecologists to understand the data and the processes in the ecosystem.</p>
+<div class="figure" style="text-align: center">
+<img src="images/absJoo2014.jpg" alt="Fig. Idealized 3D representation of ecological conditions in a given scenario, and associations with fishers spatial behavior (Joo et al. 2014)." width="80%" />
+<p class="caption">
+Fig. Idealized 3D representation of ecological conditions in a given scenario, and associations with fishers spatial behavior (Joo et al. 2014).
+</p>
+</div>
+<p>Spatial effort from a predator can be indicative of the relative abundance and spatial distribution of their prey. With that in mind, I used the behavioral mode information from anchovy fishers to build a proxy of anchovy presence. The activities were aggregated in space and time (cells of ~25 km, 1 month) and used for variogram fitting and kriging interpolation to obtain anchovy presence maps <span class="citation">(R. Joo 2013)</span>. Spatial descriptors were used to compare these maps to maps made from acoustic biomass of anchovy from concomitant scientific surveys. Positive spatial covariations between the two random fields were obtained at coarse scales, but no conclusive results were observed for fine scales <span class="citation">(Camasca Olivari 2016)</span>.</p>
+</div>
+<div id="estimating-sampling-effort-to-monitor-the-fishery" class="section level3">
+<h3>Estimating sampling effort to monitor the fishery</h3>
+<p>In IMARPE, the number of on-board observers per fishing season depended exclusively on the available budget and arbitrary decisions. They needed a robust methodology to decide on the number of observers. I developed a methodology based on simulations and resampling to assess the sensitivity of the indicators used for monitoring the fishery (e.g. catch sizes, percentage of juveniles, discards) calculated from on-board observations to the number of sampled fishing trips, thus indirectly to the number of observers. The procedure was applied to the Peruvian anchovy fishery to estimate the number of observers necessary to obtain small confidence intervals, and it can be applied to other fisheries. This study was published in Spanish in order to make the methodology more accessible to the Peruvian colleagues <span class="citation">(Joo et al. 2016)</span>. I also performed a sensitivity analysis to recommend how many individuals to sample during fishing activities in order to estimate the capture sizes of the whole fishing sets <span class="citation">(Joo et al. 2017)</span>.</p>
+</div>
+<div id="a-generalized-approach-to-the-random-walk-debate-for-human-and-animal-movement" class="section level3">
+<h3>A generalized approach to the random walk debate for human and animal movement</h3>
+<p>There have been (and still are) multiple debates about the choice of the best random walk model for trajectories of organisms; mainly between Brownian motion and Lévy walk supporters. Generally speaking, the methodological (empirical) part of the debate consisted in comparing the goodness-of-fit of the tail of the distribution of step lengths to Gaussian or power law distributions (corresponding to Brownian and Lévy, respectively). Instead of comparing two possibilities, in <span class="citation">Bertrand, Joo, and Fablet (2015)</span>, we proposed an approach that allowed the most plausible model emerge from the data, fitting the tail of the distribution of step lengths to a Generalized Pareto distribution that included Gaussian and power law as particular cases. The method was applied to Peruvian fishing vessel and seabird tracking data. The estimated parameters of scale and diffusion from the Generalized Pareto distribution provided information on the foraging strategies of each individual.</p>
+<div class="figure" style="text-align: center">
+<img src="images/GP.png" alt="Fig. Generalized Pareto Distribution, a continuum from Exponential-Poisson to Power-Lévy walk patterns: parameter k of the Generalized Pareto distribution defines a continuum of distributions from light-tailed (k&lt;0) to heavy-tailed (k&gt;0.5). (Bertrand et al. 2015)." width="70%" />
+<p class="caption">
+Fig. Generalized Pareto Distribution, a continuum from Exponential-Poisson to Power-Lévy walk patterns: parameter k of the Generalized Pareto distribution defines a continuum of distributions from light-tailed (k&lt;0) to heavy-tailed (k&gt;0.5). (Bertrand et al. 2015).
+</p>
+</div>
+</div>
+<div id="metrics-for-assessing-dyadic-movement" class="section level3">
+<h3>Metrics for assessing dyadic movement</h3>
+<p>From a review of collective movement literature, I identified that most data-driven works have relied on metrics that were not measuring what was intended, probably due to an absence of investigations on the theoretical properties of those metrics. For this reason, we investigated the adequacy of twelve metrics introduced in the literature for assessing joint movement by analyzing their theoretical properties and confronting them with contrasting case scenarios. Two criteria were taken into account for review of those metrics: 1) practical use, and 2) dependence on parameters and underlying assumptions. We also evaluated the ability of each metric to assess specific aspects of joint-movement behavior: proximity (closeness in space-time) and coordination (synchrony) in direction and speed. We found that some metrics are better suited to assess proximity and others are more sensitive to coordination <span class="citation">(Joo et al. 2018)</span>.</p>
+<div class="figure" style="text-align: center">
+<img src="images/metrics-EN.png" alt="Fig. Representation of metrics in terms of their distance relative to proximity and coordination obtaining by studying their mathematical properties. (Joo et al. 2018)." width="100%" />
+<p class="caption">
+Fig. Representation of metrics in terms of their distance relative to proximity and coordination obtaining by studying their mathematical properties. (Joo et al. 2018).
+</p>
+</div>
+</div>
+</div>
+<div id="software-packages-to-process-and-analyze-movement-data" class="section level2">
+<h2>Software packages to process and analyze movement data</h2>
+<p>R is the most used software platform in ecology <span class="citation">(Lai et al. 2019)</span>. For processing/analyzing tracking data alone, there are already 58 R packages. With so many packages, users and even developers have not been able to track them all, choose the most pertinent to use for their analyses, and, in some cases, developers duplicated work without realizing it already existed. For these reasons, we reviewed the 58 tracking packages and a few more that were related to other movement data (e.g. accelerometers). We described each package based on a workflow centered around tracking data, broken down in three stages: pre-processing, post-processing and analysis (data visualization, track description, path reconstruction, behavioral pattern identification, space use characterization, trajectory simulation and others) <span class="citation">(Joo, Boone, et al. 2020)</span>. Links between packages were assessed through a network graph analysis and showed that one third of the packages worked on isolation, reflecting a fragmentation in the R movement-ecology programming community. We also provided recommendations for users to choose packages and for developers to maximize the usefulness of their contribution and strengthen the links between the programming community. Throughout this investigation we came to the realization that there is still a need for standardized R data classes for trajectory data. We are currently working on an R package with data classes to handle tracking data, and later connect it to the other tracking packages. This work is funded by the R Consortium. Furthermore, since R packages are dynamic (i.e. new packages are created, old packages get updated and some even disappear or get deprecated due to lack of maintenance), to keep updating the list in <span class="citation">Joo, Boone, et al. (2020)</span>, we created a <a href="https://cran.r-project.org/web/views/Tracking.html">CRAN Task View</a>, that will be updated every 6 months.</p>
+<div class="figure" style="text-align: center">
+<img src="images/NetworkImportSuggestTrack.png" alt="Fig. Network representation of the dependency and suggestion between tracking packages. The arrows go towards the package the others suggest (dashed arrows) or depend on (solid arrows). Bold font corresponds to active packages. The size of the circle is proportional to the number of packages that suggest or depend on this one (Joo et al. 2020)." width="80%" />
+<p class="caption">
+Fig. Network representation of the dependency and suggestion between tracking packages. The arrows go towards the package the others suggest (dashed arrows) or depend on (solid arrows). Bold font corresponds to active packages. The size of the circle is proportional to the number of packages that suggest or depend on this one (Joo et al. 2020).
+</p>
+</div>
+</div>
+<div id="a-text-mining-approach-to-review-the-field-of-movement-ecology" class="section level2">
+<h2>A text mining approach to review the field of movement ecology</h2>
+<p>The field of movement ecology has experienced unprecedented growth in the last decade: technological advances have enabled a wide range of sensors to be used by ecologists, and analytical and programming tools have been developed to aid data processing and analysis. Aiming at a comprehensive view of the state of the field, I am currently leading a synthetic and quantitative review of the scientific publications in movement ecology <span class="citation">(Joo, Picardi, et al. 2020)</span>. We focused on the ten-year time span between the formal introduction of the movement ecology framework (MEF) by <span class="citation">Nathan et al. (2008)</span> and the end of 2018. We searched the Web of Science and obtained a database of 8007 peer-reviewed papers. We then used a text mining approach to extract text from the publications, evaluate the impact of the MEF in the literature, and assess changes in the use of technological devices, software and statistical methods. We also used Latent Dirichlet Allocation models to model the research topics in the field. We found that, while there have been major technological changes in the last decade (i.e. more use of GPS devices, accelerometers and video cameras, and a convergence towards the use of R), the focus remains on the same research questions, and more specifically, on the effect of external factors such as the environment on movement and behavior. In practice, the comprehensive approach from the MEF has not been integrated into movement ecology research. We call on researchers in movement ecology to transform the field from technology-driven to truly interdisciplinary and embracing the MEF.</p>
+<p>Stay tuned for more!</p>
 <p><!-- * I do research in movement ecology, and before I worked with fishing vessel movement. I implement and develop tools to understand the drivers of movement. As a statistician, I am very much interested in models and equations, but I'm also interested in the applications: I want my research to be a contribution to the understanding of life. And to do something meaningful.  --></p>
 <p><!-- * Currently I'm a postdoctoral research associate at University of Florida since 2018, as a movement ecologist. --></p>
 <p><!-- * I'm Peruvian, studied and worked in France and now I'm in South Florida. I also travel a lot. I always take with me: my roots, everything I've learned from different cultures and amazing people, openness to learn more and to be surprised, and, whenever I can, a percussion instrument.  --></p>
 <p><!-- ![Science, friendship, music and travels. What else?](about/websiteII.png) --></p>
+<!-- Most recent teaching activities -->
+<!--     Data Carpentry - Ecology Workshop (data organization, cleaning, management, visualization and analysis with R and SQL). Instructor and helper at the Tropical Research and Education Center, University of Florida, Homestead, USA. 14 hours. April, 2019. -->
+<!--     Hidden Markov models with MomentuHMM. Workshop instructor at the University of Liverpool, Liverpool, UK. 4 hours. May, 2018. -->
+<!--     Data Carpentry - Ecology Workshop (data organization, cleaning, management, visualization and analysis with R and SQL). Instructor and helper at the Fort Lauderdale Res and Educationearch Center, University of Florida, Davie, USA. 14 hours. April, 2018. -->
+<!--     Statistics for research and R. Statistics instructor in the ‘Field Techniques and Tropical Ecology Course’ at the Cocha Cashu Biological Station, Manu National Park, Peru. 55 hours. October, 2017. -->
 <div id="refs" class="references">
 <div id="ref-Bertrand2008">
 <p>Bertrand, S, E Diaz, and M Lengaigne. 2008. “Patterns in the spatial distribution of Peruvian anchovy <em>(Engraulis ringens)</em> revealed by spatially explicit fishing data.” <em>Progress in Oceanography</em> 79 (2-4): 379–89. <a href="https://doi.org/10.1016/j.pocean.2008.10.009">https://doi.org/10.1016/j.pocean.2008.10.009</a>.</p>
+</div>
+<div id="ref-Bertrand2015">
+<p>Bertrand, Sophie, Rocío Joo, and Ronan Fablet. 2015. “Generalized Pareto for Pattern-Oriented Random Walk Modelling of Organisms’ Movements.” <em>PloS One</em> 10 (7): e0132231. <a href="https://doi.org/10.1371/journal.pone.0132231">https://doi.org/10.1371/journal.pone.0132231</a>.</p>
+</div>
+<div id="ref-Camasca2016">
+<p>Camasca Olivari, Rommy. 2016. “Comparación de Patrones de Campos Aleatorios Modelados Bajo Un Enfoque Geoestadístico: Una Aplicación En La Ecología Pesquera.” Bachelor thesis, Universidad Nacional de Ingeniería.</p>
+</div>
+<div id="ref-Clay2020">
+<p>Clay, Thomas A., Rocío Joo, Henri Weimerskirch, Richard A. Phillips, Olivier den Ouden, Mathieu Basille, Susana Clusella‐Trullas, Jelle D. Assink, and Samantha C. Patrick. 2020. “Sex-Specific Effects of Wind on the Flight Decisions of a Sexually Dimorphic Soaring Bird.” <em>Journal of Animal Ecology</em> 89 (8): 1811–23. <a href="https://doi.org/10.1111/1365-2656.13267">https://doi.org/10.1111/1365-2656.13267</a>.</p>
 </div>
 <div id="ref-Hornborg2017">
 <p>Hornborg, Sara, Patrik Jonsson, Mattias Sköld, Mats Ulmestrand, Daniel Valentinsson, Ole Ritzau Eigaard, Jordan Feekings, J. Rasmus Nielsen, Francois Bastardie, and Johan Lövgren. 2017. “New Policies May Call for New Approaches: The Case of the Swedish Norway Lobster (Nephrops Norvegicus) Fisheries in the Kattegat and Skagerrak.” <em>ICES Journal of Marine Science</em> 74 (1): 134–45. <a href="https://doi.org/10.1093/icesjms/fsw153">https://doi.org/10.1093/icesjms/fsw153</a>.</p>
@@ -440,22 +529,50 @@ $(document).ready(function () {
 <div id="ref-Joo2013b">
 <p>———. 2013. “A Behavioral Ecology of Fishermen: Hidden Stories from Trajectory Data in the Northern Humboldt Current System.” PhD thesis. École Doctorale SIBAGHE - Systèmes intégrés en Biologie, Agronomie, Géosciences, Hydrosciences et Environnement.</p>
 </div>
+<div id="ref-Joo2014">
+<p>Joo, Rocio, Arnaud Bertrand, Marilu Bouchon, Alexis Chaigneau, Hervé Demarcq, Jorge Tam, Monique Simier, et al. 2014. “Ecosystem scenarios shape fishing spatial behavior. The case of the anchovy fishery in the northern Humboldt Current system.” <em>Progress in Oceanography</em> 128: 60–73.</p>
+</div>
 <div id="ref-Joo2013">
 <p>Joo, Rocio, Sophie Bertrand, Jorge Tam, and Ronan Fablet. 2013. “Hidden Markov models: the best models for forager movements?” <em>PLOS ONE</em> 8 (8): e71246.</p>
+</div>
+<div id="ref-Joo2015">
+<p>Joo, Rocio, Omar Salcedo, Mariano Gutierrez, Ronan Fablet, and Sophie Bertrand. 2015. “Defining fishing spatial strategies from VMS data: Insights from the world’s largest monospecific fishery.” <em>Fisheries Research</em> 164: 223–30. <a href="https://doi.org/10.1016/j.fishres.2014.12.004">https://doi.org/10.1016/j.fishres.2014.12.004</a>.</p>
 </div>
 <div id="ref-Joo2011">
 <p>Joo, Rocío, Sophie Bertrand, Alexis Chaigneau, and Miguel Ñiquen. 2011. “Optimization of an artificial neural network for identifying fishing set positions from VMS data: An example from the Peruvian anchovy purse seine fishery.” <em>Ecological Modelling</em> 222: 1048–59. <a href="https://doi.org/10.1016/j.ecolmodel.2010.08.039">https://doi.org/10.1016/j.ecolmodel.2010.08.039</a>.</p>
 </div>
+<div id="ref-Joo2020">
+<p>Joo, Rocío, Matthew E. Boone, Thomas A. Clay, Samantha C. Patrick, Susana Clusella‐Trullas, and Mathieu Basille. 2020. “Navigating Through the R Packages for Movement.” <em>Journal of Animal Ecology</em> 89 (1): 248–67. <a href="https://doi.org/10.1111/1365-2656.13116">https://doi.org/10.1111/1365-2656.13116</a>.</p>
+</div>
+<div id="ref-Joo2018">
+<p>Joo, Rocío, Marie-Pierre Etienne, Nicolas Bez, and Stéphanie Mahévas. 2018. “Metrics for Describing Dyadic Movement: A Review.” <em>Movement Ecology</em> 6 (1): 26. <a href="https://doi.org/10.1186/s40462-018-0144-2">https://doi.org/10.1186/s40462-018-0144-2</a>.</p>
+</div>
+<div id="ref-Joo2016">
+<p>Joo, Rocío, Daniel Grados, Marilú Bouchon, and Erich Díaz. 2016. “Tamaño óptimo de Muestra Del Programa de Observadores a Bordo de La Flota Dirigida a La Explotación de La Anchoveta Peruana (Engraulis Ringens).” <em>Revista Peruana de Biología</em> 23: 169–82.</p>
+</div>
+<div id="ref-Joo2017">
+<p>———. 2017. “Tamaño óptimo de Muestra Para Estimar La Distribución de Tallas Y Proporción de Juveniles de Anchoveta Por Lance a Bordo de La Flota de Cerco Peruana.” <em>Revista Peruana de Biología</em> 23: 059–066.</p>
+</div>
+<div id="ref-JooPreprint">
+<p>Joo, Rocío, Simona Picardi, Matthew E. Boone, Thomas A. Clay, Samantha C. Patrick, Vilma S. Romero-Romero, and Mathieu Basille. 2020. “A Decade of Movement Ecology.” <em>arXiv:2006.00110 [Q-Bio]</em>, May. <a href="http://arxiv.org/abs/2006.00110">http://arxiv.org/abs/2006.00110</a>.</p>
+</div>
+<div id="ref-Lai2019">
+<p>Lai, Jiangshan, Christopher J. Lortie, Robert A. Muenchen, Jian Yang, and Keping Ma. 2019. “Evaluating the Popularity of R in Ecology.” <em>Ecosphere</em> 10 (1): e02567. <a href="https://doi.org/10.1002/ecs2.2567">https://doi.org/10.1002/ecs2.2567</a>.</p>
+</div>
 <div id="ref-Maufroy2015">
 <p>Maufroy, Alexandra, Emmanuel Chassot, Rocío Joo, and David Michael Kaplan. 2015. “Large-Scale Examination of Spatio-Temporal Patterns of Drifting Fish Aggregating Devices (dFADs) from Tropical Tuna Fisheries of the Indian and Atlantic Oceans.” <em>PloS One</em> 10 (5): e0128023. <a href="https://doi.org/10.1371/journal.pone.0128023">https://doi.org/10.1371/journal.pone.0128023</a>.</p>
+</div>
+<div id="ref-Nathan2008">
+<p>Nathan, R, W M Getz, E Revilla, M Holyoak, R Kadmon, D Saltz, and P E Smouse. 2008. “A movement ecology paradigm for unifying organismal movement research.” <em>PNAS</em> 105 (49): 19052–9.</p>
 </div>
 <div id="ref-Poos2010">
 <p>Poos, Jan-Jaap, F J Quirijns, and A D Rijnsdorp. 2010. “Spatial segregation among fishing vessels in a multispecies fishery.” <em>ICES Journal of Marine Science</em> 67: 155–64.</p>
 </div>
+<div id="ref-SantosDaSilva2017">
+<p>Santos Da Silva, Icaro. 2017. “Padrões de Deslocamentos Da Embarcação Pesqueira Do Tipo Canoa de Mar Aberto Na Costa de Sergipe, Brasil.” Bachelor thesis, Universidade Federal de Sergipe.</p>
+</div>
 <div id="ref-TorresRev">
 <p>Torres-Irineo, Edgar, Silvia Salas, Jorge Iván Euán-Ávila, Leopoldo E. Palomo, Daniel R. Quijano Quiñones, Eva Coronado, and Rocio Joo. n.d. “Spatio-Temporal Determination of Small-Scale Vessels’ Fishing Grounds from a Vessel Monitoring System in the Southeastern Gulf of Mexico.” <em>In Review</em>.</p>
-</div>
-</div>
 </div>
 </div>
 </div>
