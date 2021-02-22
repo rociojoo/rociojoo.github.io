@@ -84,6 +84,23 @@ packages for movement. 2020. Journal of animal ecology 89 (247-267). https://bes
 
 # Teaching resources
 
+  *   R para Biologging. Curso online organizado por la Universidad Científica del Sur. Slides de los módulos que enseñé:
+  
+      *   [Hojas de cálculo](https://rociojoo.github.io/Curso-R-biologging/01-Hojas-Calculo.html)
+    
+      *   [Introducción a R](https://rociojoo.github.io/Curso-R-biologging/02-Intro-R.html)
+    
+      *   [Gráficos en R](https://rociojoo.github.io/Curso-R-biologging/03-Graficos-R.html)
+    
+      *   [Modelos mixtos en R](https://rociojoo.github.io/Curso-R-biologging/04-Modelos-Mixtos.html)
+    
+      *   [Modelos ocultos de Markov en R](https://github.com/rociojoo/Curso-R-biologging/blob/master/05-HMM.pdf)
+    
+      *   [Paquetes en R para biologging](https://rociojoo.github.io/Curso-R-biologging/06-Paquetes.html)
+    
+      *   [Rmarkdown y reproducibilidad](https://rociojoo.github.io/Curso-R-biologging/07-Rmd-Repro.html)
+
+  *   [Movement Visualization workshop](https://rociojoo.github.io/MovementVisualization.html) for the moving2gather conference, March 11-13, Rennes, France.
 
   
 # Research topics
