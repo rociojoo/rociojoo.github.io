@@ -7,19 +7,10 @@ navbar:
     - text: "Home"
       icon: fa-home
       href: index.html
-    - text: "Research"
-      icon: fa-user 
-      href: research.html
-    - text: "CV"
-      icon: fa-file-pdf
-      href: cv/CV.pdf
-    - text: "Blog"
-      icon: fa-rss
-      href: blog.html  # CHANGE HERE OR DELETE ALL 3 LINES 
   right:
     - text: "Contact me"
       icon: fa-envelope
-      href: mailto:rocio.joo@globafishingwatch.org                  # CHANGE HERE 
+      href: mailto:rocio.joo@globalfishingwatch.org                  # CHANGE HERE 
     - text: "GitHub"
       icon: fab fa-github
       href: https://github.com/rociojoo       # CHANGE HERE 

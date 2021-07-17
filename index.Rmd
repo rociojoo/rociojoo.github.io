@@ -7,13 +7,8 @@
 <br>
 <br>
 
-<span style="font-size:2em;">Hey, welcome to my website! Thanks for coming, gracias por venir :) </span>
+<span style="font-size:2em;">Thanks for coming. Please go to my new [website](https://rociojoo.netlify.app/) </span>
 
-* To know more about my research, click [here](research.html).
-
-* For more personal stuff (music, travels, food, books), I'm working on it. I promise.
-
-* For blog posts that could give a mix of both, they're [here](blog.html).
 
 <br>
 
